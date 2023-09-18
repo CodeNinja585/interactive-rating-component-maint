@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* # Modified / altered color values */
+    --clr-primary-hsl-400: hsl(213, 19%, 18%);
+    --clr-primary-hsl-500: hsl(213, 19%, 18%);
+    --clr-secondary-hsl-400: hsl(216, 20%, 11%);
+    --clr-secondary-hsl-500: hsl(216, 20%, 40%);
+        
+        
+    --clr-primary-400: hsl(var(--clr-primary-hsl-400));
+    --clr-primary-500: hsl(var(--clr-primary-hsl-500));
+    --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
+    /* gradient color */
+    --gradient-primary: linear-gradient(var(--darkBlue), var(--clr-secondary-hsl-400));    
+    
+    /* ### Primary Colors  */
+    --Orange: hsl(25, 97%, 53%);
+    --Horange: hsl(25, 97%, 33%);
+    --primary-orange: hsl(25, 97%, 37%);
+    
+    /* ### Neutral */    
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --LightGrey1: hsl(217, 12%, 53%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);        
+    
+    /* ## Typography */
+    /* fontfamilies */
+    --font-f:'Barlow Semi Condensed', sans-serif;
+    --font-f1:'Hanken Grotesk', sans-serif;
+    --font-f2:'Overpass', sans-serif;
+    /* font weights and sizes */
+    --cir-pad: 1.5rem;
+    --fontSize: 15px;
+    --fw: 400;
+    --fw1: 700;   
+}
+
+body{
+    font-family: var(--font-f);
+    background: var(--veryDarkBlue);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main {    
+    width: 26rem;
+    background: var(--gradient-primary);
+    border-radius: 2rem;
+    padding: 3rem;
+    display: grid;
+    gap: 35px;    
+    place-items: center;    
+}
+
+.rating{
+    background-color: var(--darkBlue);
+    border-radius: 100vw;
+    padding: 0.2rem 0.5rem;
+    color: var(--primary-orange);
+    font-size: var(--fw);
+}
+
+.ourThanks{    
+    width: 21rem;
+    display: flex; 
+    flex-direction: column;
+    gap: 0.6rem;
+
+    text-align: center;        
+}
+
+.ourThanks h1{
+    color: var(--White);
+    font-weight: var(--fw1);
+    font-size: 1.5rem;    
+    font-family: var(--font-f2);
+}
+
+.ourThanks p{         
+    color: var(--LightGrey1);
+    font-size: var(--fontSize);
+    line-height: 1.3rem;    
+    font-family: var(--font-f2);    
+}
+
+@media (min-width:375px) {
+    body{
+        margin-inline: 1rem;
+    }    
+}
